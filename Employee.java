@@ -4,15 +4,15 @@ public class Employee extends Person implements Payable{
     public Employee(){
 
     }
-    public Employee(String name, String surname, double salary){
+    public Employee(String name, String surname, String position,double salary){
         super(name, surname);
-        setPosition();
+        setPosition(position);
         setSalary(salary);
     }
 
 
-    public void setPosition(){
-        this.position = getPosition();
+    public void setPosition(String position){
+        this.position = position;
     }
     public void setSalary(double salary){
         this.salary = salary;

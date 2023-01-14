@@ -1,4 +1,4 @@
-public class Person implements Comparable<Person>, Payable{
+public abstract class Person implements Comparable<Person>, Payable{
     private static int idd = 1;
     private int id = 0;
     private String name;
@@ -28,19 +28,14 @@ public class Person implements Comparable<Person>, Payable{
         return id;
     }
 
-    public String getPosition(){
-        return "Student";
-    }
-
+    public abstract String getPosition();
     @Override
     public String toString(){
         return id + "." + name + " " + surname;
     }
 
 
-    public double getPaymentAmount() {
-        return 0;
-    }
+    public abstract double getPaymentAmount();
 
     @Override
     public int compareTo(Person o) {
